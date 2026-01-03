@@ -315,4 +315,228 @@ document.querySelectorAll('.service-option input').forEach(checkbox => {
     checkbox.addEventListener('change', updateBookingSummary);
 });
 
+// Authentication System
+class AuthManager {
+    constructor() {
+        this.currentUser = null;
+        this.init();
+    }
+
+    init() {
+        // Initialize default users if none exist
+        if (!localStorage.getItem('users')) {
+            const defaultUsers = [
+                {
+                    id: 1,
+                    name: 'Aaditya Sah',
+                    email: 'aadityasah@email.com',
+                    password: 'aaditya',
+                    profileImage: 'images/hostels/aadi2.jpeg'
+                },
+                {
+                    id: 2,
+                    name: 'Test User',
+                    email: 'test@example.com',
+                    password: 'test123',
+                    profileImage: 'images/hostels/aadi2.jpeg'
+                }
+            ];
+            localStorage.setItem('users', JSON.stringify(defaultUsers));
+        }
+
+        // Check if user is logged in
+        const loggedInUser = localStorage.getItem('currentUser');
+        if (loggedInUser) {
+            this.currentUser = JSON.parse(loggedInUser);
+        }
+    }
+
+    login(email, password) {
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
+        const user = users.find(u => u.email === email && u.password === password);
+
+        if (user) {
+            this.currentUser = user;
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            return { success: true, user: user };
+        }
+
+        return { success: false, message: 'Invalid email or password' };
+    }
+
+    register(name, email, password) {
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+        // Check if user already exists
+        if (users.find(u => u.email === email)) {
+            return { success: false, message: 'Email already registered' };
+        }
+
+        const newUser = {
+            id: Date.now(),
+            name: name,
+            email: email,
+            password: password,
+            profileImage: 'images/avatars/avatar1.webp'
+        };
+
+        users.push(newUser);
+        localStorage.setItem('users', JSON.stringify(users));
+
+        return { success: true, user: newUser };
+    }
+
+    logout() {
+        this.currentUser = null;
+        localStorage.removeItem('currentUser');
+    }
+
+    isLoggedIn() {
+        return this.currentUser !== null;
+    }
+
+    getCurrentUser() {
+        return this.currentUser;
+    }
+
+    requireAuth() {
+        if (!this.isLoggedIn()) {
+            window.location.href = 'login.html';
+            return false;
+        }
+        return true;
+    }
+}
+
+// Initialize authentication manager
+const authManager = new AuthManager();
+
+// Login Form Handling
+function handleLogin(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const email = form.querySelector('input[type="email"]').value;
+    const password = form.querySelector('input[type="password"]').value;
+
+    // Clear previous errors
+    clearFormErrors(form);
+
+    // Validate form
+    if (!validateLoginForm(form)) {
+        return;
+    }
+
+    // Attempt login
+    const result = authManager.login(email, password);
+
+    if (result.success) {
+        showNotification('Login successful! Redirecting...', 'success');
+        setTimeout(() => {
+            window.location.href = 'dashboard.html';
+        }, 1000);
+    } else {
+        showError(form.querySelector('input[type="password"]'), result.message);
+    }
+}
+
+// Registration Form Handling
+function handleRegistration(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const name = form.querySelector('input[type="text"]').value;
+    const email = form.querySelector('input[type="email"]').value;
+    const password = form.querySelector('input[type="password"]').value;
+
+    // Clear previous errors
+    clearFormErrors(form);
+
+    // Validate form
+    if (!validateRegistrationForm(form)) {
+        return;
+    }
+
+    // Attempt registration
+    const result = authManager.register(name, email, password);
+
+    if (result.success) {
+        showNotification('Registration successful! You can now log in.', 'success');
+        // Switch to login form
+        document.getElementById('container').classList.remove('right-panel-active');
+        form.reset();
+    } else {
+        showError(form.querySelector('input[type="email"]'), result.message);
+    }
+}
+
+// Form Validation
+function validateLoginForm(form) {
+    let isValid = true;
+    const email = form.querySelector('input[type="email"]');
+    const password = form.querySelector('input[type="password"]');
+
+    if (!email.value.trim()) {
+        showError(email, 'Email is required');
+        isValid = false;
+    } else if (!isValidEmail(email.value)) {
+        showError(email, 'Please enter a valid email address');
+        isValid = false;
+    }
+
+    if (!password.value.trim()) {
+        showError(password, 'Password is required');
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+function validateRegistrationForm(form) {
+    let isValid = true;
+    const name = form.querySelector('input[type="text"]');
+    const email = form.querySelector('input[type="email"]');
+    const password = form.querySelector('input[type="password"]');
+
+    if (!name.value.trim()) {
+        showError(name, 'Name is required');
+        isValid = false;
+    }
+
+    if (!email.value.trim()) {
+        showError(email, 'Email is required');
+        isValid = false;
+    } else if (!isValidEmail(email.value)) {
+        showError(email, 'Please enter a valid email address');
+        isValid = false;
+    }
+
+    if (!password.value.trim()) {
+        showError(password, 'Password is required');
+        isValid = false;
+    } else if (password.value.length < 6) {
+        showError(password, 'Password must be at least 6 characters');
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+function clearFormErrors(form) {
+    const errorMessages = form.querySelectorAll('.error-message');
+    errorMessages.forEach(error => error.remove());
+    const errorFields = form.querySelectorAll('.error');
+    errorFields.forEach(field => field.classList.remove('error'));
+}
+
+// Logout Function
+function handleLogout(e) {
+    e.preventDefault();
+    authManager.logout();
+    showNotification('Logged out successfully', 'success');
+    setTimeout(() => {
+        window.location.href = 'index.html';
+    }, 1000);
+}
+
 console.log('Basai - Student Accommodation System loaded successfully');

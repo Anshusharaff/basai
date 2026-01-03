@@ -457,6 +457,41 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Check authentication on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!authManager.requireAuth()) {
+                return; // Will redirect to login if not authenticated
+            }
+
+            // Update user info in dashboard
+            const user = authManager.getCurrentUser();
+            if (user) {
+                // Update welcome message
+                const welcomeElement = document.querySelector('h1');
+                if (welcomeElement) {
+                    welcomeElement.textContent = `Welcome back, ${user.name.split(' ')[0]}! 👋`;
+                }
+
+                // Update profile info
+                const profileName = document.querySelector('.user-profile h3');
+                const profileEmail = document.querySelector('.user-profile p');
+                const profileImg = document.querySelector('.profile-picture');
+
+                if (profileName) profileName.textContent = user.name;
+                if (profileEmail) profileEmail.textContent = user.email;
+                if (profileImg) profileImg.src = user.profileImage;
+            }
+        });
+
+        // Add logout functionality
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.logout')) {
+                e.preventDefault();
+                handleLogout(e);
+            }
+        });
+    </script>
 </body>
 
 </html>
