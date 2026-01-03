@@ -338,7 +338,7 @@ class AuthManager {
                     name: 'Test User',
                     email: 'test@example.com',
                     password: 'test123',
-                    profileImage: 'images/avatars/avatar1.jpeg'
+                    profileImage: 'images/avatars/avatar1.webp'
                 }
             ];
             localStorage.setItem('users', JSON.stringify(defaultUsers));
