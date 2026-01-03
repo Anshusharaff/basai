@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Basai</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/hostels/logo.jpeg" class="image-logo" alt="Basai Logo">
+                    <span>BASAI</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hostels.html">Browse Hostels</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html" class="btn-dashboard">My Dashboard</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Process Steps -->
+    <section class="booking-steps">
+        <div class="container">
+            <div class="steps-progress">
+                <div class="step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">Guest Details</div>
+                </div>
+                <div class="step-line active"></div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Payment</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Confirmation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-layout">
+                <!-- Left Side - Payment Methods -->
+                <div class="payment-main">
+                    <h1>Choose Payment Method</h1>
+                    <p class="payment-subtitle">Select your preferred payment method to complete the booking</p>
+
+                    <!-- Payment Options -->
+                    <div class="payment-options">
+
+                        <!-- eSewa Payment -->
+                        <div class="payment-option" data-method="esewa">
+                            <input type="radio" name="payment-method" id="esewa" value="esewa" checked>
+                            <label for="esewa">
+                                <div class="payment-method-header">
+                                    <div class="payment-logo">
+                                        <img src="images/payments/esewa-logo.png" alt="eSewa" style="height: 40px;">
+                                    </div>
+                                    <div class="payment-info">
+                                        <h3>eSewa</h3>
+                                        <p>Pay with your eSewa wallet - Fast & Secure</p>
+                                    </div>
+                                    <div class="payment-badge recommended">Recommended</div>
+                                </div>
+                            </label>
+                            <div class="payment-details" id="esewa-details">
+                                <div class="payment-form">
+                                    <p class="payment-instruction">
+                                        <i class="fas fa-info-circle"></i>
+                                        You will be redirected to eSewa to complete your payment securely
+                                    </p>
+                                    <div class="payment-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Instant payment confirmation</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>No additional charges</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Secure transaction</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-pay-now">
+                                        <img src="images/payments/esewa-icon.png" alt=""
+                                            style="height: 20px; margin-right: 10px;">
+                                        Pay NPR 2,648 with eSewa
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Khalti Payment -->
+                        <div class="payment-option" data-method="khalti">
+                            <input type="radio" name="payment-method" id="khalti" value="khalti">
+                            <label for="khalti">
+                                <div class="payment-method-header">
+                                    <div class="payment-logo">
+                                        <img src="images/payments/khalti-logo.png" alt="Khalti" style="height: 40px;">
+                                    </div>
+                                    <div class="payment-info">
+                                        <h3>Khalti</h3>
+                                        <p>Digital wallet payment with Khalti</p>
+                                    </div>
+                                    <div class="payment-badge popular">Popular</div>
+                                </div>
+                            </label>
+                            <div class="payment-details" id="khalti-details" style="display: none;">
+                                <div class="payment-form">
+                                    <p class="payment-instruction">
+                                        <i class="fas fa-info-circle"></i>
+                                        You will be redirected to Khalti to complete your payment securely
+                                    </p>
+                                    <div class="payment-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Quick & Easy payment</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Multiple payment options</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Bank transfer support</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-pay-now khalti-btn">
+                                        <img src="images/payments/khalti-icon.png" alt=""
+                                            style="height: 20px; margin-right: 10px;">
+                                        Pay NPR 2,648 with Khalti
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Credit/Debit Card -->
+                        <div class="payment-option" data-method="card">
+                            <input type="radio" name="payment-method" id="card" value="card">
+                            <label for="card">
+                                <div class="payment-method-header">
+                                    <div class="payment-logo">
+                                        <i class="fas fa-credit-card" style="font-size: 32px; color: #4CAF50;"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <h3>Credit / Debit Card</h3>
+                                        <p>Pay with Visa, Mastercard, or other cards</p>
+                                    </div>
+                                    <div class="card-logos">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="payment-details" id="card-details" style="display: none;">
+                                <div class="payment-form">
+                                    <div class="form-group">
+                                        <label>Card Number *</label>
+                                        <div class="card-input">
+                                            <input type="text" class="form-control" placeholder="1234 5678 9012 3456"
+                                                maxlength="19">
+                                            <div class="card-icons">
+                                                <i class="fab fa-cc-visa"></i>
+                                                <i class="fab fa-cc-mastercard"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Cardholder Name *</label>
+                                        <input type="text" class="form-control" placeholder="Name on card">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Expiry Date *</label>
+                                            <input type="text" class="form-control" placeholder="MM/YY" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>CVV *</label>
+                                            <input type="text" class="form-control" placeholder="123" maxlength="3">
+                                            <i class="fas fa-question-circle cvv-help"
+                                                title="3-digit security code on back of card"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-pay-now card-btn">
+                                        <i class="fas fa-lock"></i>
+                                        Pay NPR 2,648 Securely
+                                    </button>
+                                    <p class="secure-text">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Your card details are encrypted and secure
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bank Transfer -->
+                        <div class="payment-option" data-method="bank">
+                            <input type="radio" name="payment-method" id="bank" value="bank">
+                            <label for="bank">
+                                <div class="payment-method-header">
+                                    <div class="payment-logo">
+                                        <i class="fas fa-university" style="font-size: 32px; color: #2196F3;"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <h3>Bank Transfer</h3>
+                                        <p>Direct bank transfer to our account</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="payment-details" id="bank-details" style="display: none;">
+                                <div class="payment-form">
+                                    <div class="bank-info-box">
+                                        <h4>Bank Account Details</h4>
+                                        <div class="bank-detail-row">
+                                            <span>Bank Name:</span>
+                                            <strong>Nabil Bank Limited</strong>
+                                        </div>
+                                        <div class="bank-detail-row">
+                                            <span>Account Name:</span>
+                                            <strong>Basai Pvt. Ltd.</strong>
+                                        </div>
+                                        <div class="bank-detail-row">
+                                            <span>Account Number:</span>
+                                            <strong>01234567890123</strong>
+                                            <button class="btn-copy"><i class="fas fa-copy"></i></button>
+                                        </div>
+                                        <div class="bank-detail-row">
+                                            <span>Branch:</span>
+                                            <strong>Thamel Branch</strong>
+                                        </div>
+                                        <div class="bank-detail-row">
+                                            <span>SWIFT Code:</span>
+                                            <strong>NARBNPKA</strong>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Upload Payment Receipt *</label>
+                                        <div class="file-upload">
+                                            <input type="file" id="receipt" accept="image/*,.pdf">
+                                            <label for="receipt" class="file-upload-label">
+                                                <i class="fas fa-cloud-upload-alt"></i>
+                                                <span>Click to upload receipt</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Transaction Reference Number</label>
+                                        <input type="text" class="form-control" placeholder="Enter reference number">
+                                    </div>
+                                    <div class="alert-info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <p>Your booking will be confirmed once we verify your payment (usually within 24
+                                            hours)</p>
+                                    </div>
+                                    <button class="btn-pay-now bank-btn">
+                                        <i class="fas fa-check"></i>
+                                        Submit Payment Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pay at Hostel -->
+                        <div class="payment-option" data-method="cash">
+                            <input type="radio" name="payment-method" id="cash" value="cash">
+                            <label for="cash">
+                                <div class="payment-method-header">
+                                    <div class="payment-logo">
+                                        <i class="fas fa-money-bill-wave" style="font-size: 32px; color: #FF9800;"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <h3>Pay at Hostel</h3>
+                                        <p>Pay cash when you arrive at the hostel</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="payment-details" id="cash-details" style="display: none;">
+                                <div class="payment-form">
+                                    <div class="alert-warning">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <p><strong>Important:</strong> A deposit of NPR 1,000 will be required to
+                                            confirm your booking</p>
+                                    </div>
+                                    <div class="cash-info">
+                                        <h4>Payment Instructions:</h4>
+                                        <ul>
+                                            <li><i class="fas fa-check"></i> Complete booking to receive confirmation
+                                            </li>
+                                            <li><i class="fas fa-check"></i> Pay remaining amount at check-in</li>
+                                            <li><i class="fas fa-check"></i> Bring valid ID and booking confirmation
+                                            </li>
+                                            <li><i class="fas fa-check"></i> Cash payment accepted in NPR only</li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn-pay-now cash-btn">
+                                        <i class="fas fa-check-circle"></i>
+                                        Confirm Booking
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Notice -->
+                    <div class="security-notice">
+                        <div class="security-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="security-text">
+                            <h4>Your payment is secure</h4>
+                            <p>We use industry-standard SSL encryption to protect your payment information. Your data is
+                                safe with us.</p>
+                        </div>
+                    </div>
+
+                    <!-- Payment Actions -->
+                    <div class="payment-actions">
+                        <a href="booking.html" class="btn-back">
+                            <i class="fas fa-arrow-left"></i> Back to Booking
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Order Summary -->
+                <div class="payment-summary">
+                    <div class="summary-card sticky">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-hostel">
+                            <img src="images/hostels/thamel-heights.jpg" alt="Thamel Heights Hostel">
+                            <div class="hostel-summary-info">
+                                <h4>Thamel Heights Hostel</h4>
+                                <div class="rating-small">
+                                    <i class="fas fa-star"></i> 4.8
+                                </div>
+                                <p><i class="fas fa-map-marker-alt"></i> Thamel, Kathmandu</p>
+                            </div>
+                        </div>
+
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span><i class="fas fa-calendar-check"></i> Check-in</span>
+                                <strong>Jan 15, 2026</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span><i class="fas fa-calendar"></i> Check-out</span>
+                                <strong>Jan 18, 2026</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span><i class="fas fa-moon"></i> Duration</span>
+                                <strong>3 nights</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span><i class="fas fa-bed"></i> Room</span>
+                                <strong>Mixed Dormitory</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span><i class="fas fa-user"></i> Guests</span>
+                                <strong>1 Person</strong>
+                            </div>
+                        </div>
+
+                        <div class="summary-guest">
+                            <h4>Guest Information</h4>
+                            <p><strong>John Doe</strong></p>
+                            <p>john.doe@email.com</p>
+                            <p>+977-9812345678</p>
+                        </div>
+
+                        <div class="summary-pricing">
+                            <div class="price-row">
+                                <span>Room charge</span>
+                                <span>NPR 2,400</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Service fee</span>
+                                <span>NPR 120</span>
+                            </div>
+                            <div class="price-row">
+                                <span>VAT (13%)</span>
+                                <span>NPR 328</span>
+                            </div>
+                            <div class="price-row discount">
+                                <span><i class="fas fa-tag"></i> Discount</span>
+                                <span>-NPR 200</span>
+                            </div>
+                            <div class="price-divider"></div>
+                            <div class="price-row total">
+                                <span>Total to Pay</span>
+                                <span>NPR 2,648</span>
+                            </div>
+                        </div>
+
+                        <div class="payment-benefits">
+                            <h4>What's Included:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Free WiFi</li>
+                                <li><i class="fas fa-check"></i> Breakfast</li>
+                                <li><i class="fas fa-check"></i> Free parking</li>
+                                <li><i class="fas fa-check"></i> 24/7 reception</li>
+                                <li><i class="fas fa-check"></i> Secure lockers</li>
+                            </ul>
+                        </div>
+
+                        <div class="help-section">
+                            <h4>Need Help?</h4>
+                            <p>Our support team is available 24/7</p>
+                            <div class="help-buttons">
+                                <a href="contact.html" class="btn-help">
+                                    <i class="fas fa-phone"></i> Call Us
+                                </a>
+                                <a href="contact.html" class="btn-help">
+                                    <i class="fas fa-comment"></i> Chat
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span>Basai</span>
+                    </div>
+                    <p>Your trusted hostel management system in Kathmandu, Nepal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="hostels.html">Browse Hostels</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Popular Areas</h3>
+                    <ul>
+                        <li><a href="#">Thamel</a></li>
+                        <li><a href="#">Lazimpat</a></li>
+                        <li><a href="#">Basantapur</a></li>
+                        <li><a href="#">Swayambhu</a></li>
+                        <li><a href="#">Boudha</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Thamel, Kathmandu 44600, Nepal</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+977 1-4567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@basai.com.np</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Basai. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+
+</html>

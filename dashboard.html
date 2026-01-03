@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Basai</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/hostels/logo.jpeg" class="image-logo" alt="Basai Logo">
+                    <span>BASAI</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hostels.html">Browse Hostels</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html" class="btn-dashboard active">My Dashboard</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-layout">
+                <!-- Sidebar -->
+                <aside class="dashboard-sidebar">
+                    <div class="user-profile">
+                        <img src="images/hostels/aadi2.jpeg" alt="Profile" class="profile-picture">
+                        <h3>Aaditya sah</h3>
+                        <p>aadityasah@email.com</p>
+                        <button class="btn-edit-profile">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                    </div>
+
+                    <nav class="dashboard-nav">
+                        <a href="#overview" class="nav-item active">
+                            <i class="fas fa-th-large"></i>
+                            <span>Overview</span>
+                        </a>
+                        <a href="#bookings" class="nav-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>My Bookings</span>
+                            <span class="badge">3</span>
+                        </a>
+                        <a href="#favorites" class="nav-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Favorites</span>
+                            <span class="badge">7</span>
+                        </a>
+                        <a href="#reviews" class="nav-item">
+                            <i class="fas fa-star"></i>
+                            <span>My Reviews</span>
+                        </a>
+                        <a href="#messages" class="nav-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="badge unread">2</span>
+                        </a>
+                        <a href="#payments" class="nav-item">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Payment Methods</span>
+                        </a>
+                        <a href="#settings" class="nav-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="#" class="nav-item logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="dashboard-main">
+                    <!-- Welcome Section -->
+                    <div class="dashboard-header">
+                        <div>
+                            <h1>Welcome back, Aaditya! 👋</h1>
+                            <p>Manage your bookings and explore new hostels</p>
+                        </div>
+                        <a href="hostels.html" class="btn-primary">
+                            <i class="fas fa-search"></i> Browse Hostels
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon blue">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>3</h3>
+                                <p>Active Bookings</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon green">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>12</h3>
+                                <p>Total Stays</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon orange">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>1,250</h3>
+                                <p>Reward Points</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon purple">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>8</h3>
+                                <p>Reviews Written</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Bookings -->
+                    <div class="dashboard-section-content">
+                        <div class="section-header-dash">
+                            <h2>Upcoming Bookings</h2>
+                            <a href="#bookings" class="link-view-all">View All</a>
+                        </div>
+
+                        <div class="booking-cards">
+                            <div class="booking-card-dash">
+                                <!-- <div class="booking-status confirmed">Confirmed</div> -->
+                                <div class="booking-card-content">
+                                    <div class="booking-image-small">
+                                        <img src="images/hostels/hostel1.jpeg" alt="Thamel Heights">
+                                    </div>
+                                    <div class="booking-details-dash">
+                                        <h3>Thamel Heights Hostel</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Thamel, Kathmandu</p>
+                                        <div class="booking-dates">
+                                            <div class="date-item">
+                                                <span class="label">Check-in</span>
+                                                <span class="value">Jan 15, 2026</span>
+                                            </div>
+                                            <div class="date-separator">→</div>
+                                            <div class="date-item">
+                                                <span class="label">Check-out</span>
+                                                <span class="value">mar 18, 2026</span>
+                                            </div>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <span><i class="fas fa-bed"></i> Mixed Dormitory</span>
+                                            <span><i class="fas fa-user"></i> 1 student</span>
+                                            <span><i class="fas fa-moon"></i> 3 Months</span>
+                                        </div>
+                                    </div>
+                                    <div class="booking-actions-dash">
+                                        <div class="booking-price-dash">NPR 2,648</div>
+                                        <button class="btn-action-dash">View Details</button>
+                                        <button class="btn-action-dash secondary">Modify</button>
+                                        <button class="btn-action-dash cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="booking-card-dash">
+                                <!-- <div class="booking-status pending">Pending Payment</div> -->
+                                <div class="booking-card-content">
+                                    <div class="booking-image-small">
+                                        <img src="images/hostels/hostel2.jpeg" alt="Himalayan Retreat">
+                                    </div>
+                                    <div class="booking-details-dash">
+                                        <h3>Himalayan Retreat Hostel</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Lazimpat, Kathmandu
+                                        </p>
+                                        <div class="booking-dates">
+                                            <div class="date-item">
+                                                <span class="label">Check-in</span>
+                                                <span class="value">Feb 10, 2026</span>
+                                            </div>
+                                            <div class="date-separator">→</div>
+                                            <div class="date-item">
+                                                <span class="label">Check-out</span>
+                                                <span class="value">Feb 15, 2027</span>
+                                            </div>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <span><i class="fas fa-bed"></i> Private Double</span>
+                                            <span><i class="fas fa-user"></i> 2 student</span>
+                                            <span><i class="fas fa-moon"></i> 1 Year</span>
+                                        </div>
+                                    </div>
+                                    <div class="booking-actions-dash">
+                                        <div class="booking-price-dash">NPR 6,500</div>
+                                        <button class="btn-action-dash primary">Complete Payment</button>
+                                        <button class="btn-action-dash cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Favorite Hostels -->
+                    <div class="dashboard-section-content">
+                        <div class="section-header-dash">
+                            <h2>My Favorite Hostels</h2>
+                            <a href="#favorites" class="link-view-all">View All</a>
+                        </div>
+
+                        <div class="favorites-grid">
+                            <div class="favorite-card">
+                                <div class="favorite-image">
+                                    <img src="images/hostels/hostel5.webp" alt="Swayambhu Vista">
+                                    <button class="btn-remove-favorite">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="favorite-info">
+                                    <h4>Swayambhu Vista Hostel</h4>
+                                    <p><i class="fas fa-map-marker-alt"></i> Swayambhu</p>
+                                    <div class="rating-small">
+                                        <i class="fas fa-star"></i> 4.7
+                                    </div>
+                                    <div class="price-from">From NPR 950/month</div>
+                                    <a href="hostel-detail.html?id=4" class="btn-view-small">View Hostel</a>
+                                </div>
+                            </div>
+
+                            <div class="favorite-card">
+                                <div class="favorite-image">
+                                    <img src="images/hostels/hostel4.jpeg" alt="Boudha Backpackers">
+                                    <button class="btn-remove-favorite">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="favorite-info">
+                                    <h4>Boudha  Hostel</h4>
+                                    <p><i class="fas fa-map-marker-alt"></i> Boudha</p>
+                                    <div class="rating-small">
+                                        <i class="fas fa-star"></i> 4.9
+                                    </div>
+                                    <div class="price-from">From NPR 700/month</div>
+                                    <a href="hostel-detail.html?id=5" class="btn-view-small">View Hostel</a>
+                                </div>
+                            </div>
+
+                            <div class="favorite-card">
+                                <div class="favorite-image">
+                                    <img src="images/hostels/hostel6.jpeg" alt="Patan Heritage">
+                                    <button class="btn-remove-favorite">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="favorite-info">
+                                    <h4>Patan Heritage Hostel</h4>
+                                    <p><i class="fas fa-map-marker-alt"></i> Patan</p>
+                                    <div class="rating-small">
+                                        <i class="fas fa-star"></i> 4.6
+                                    </div>
+                                    <div class="price-from">From NPR 850/month</div>
+                                    <a href="hostel-detail.html?id=6" class="btn-view-small">View Hostel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="dashboard-section-content">
+                        <div class="section-header-dash">
+                            <h2>Recent Activity</h2>
+                        </div>
+
+                        <div class="activity-timeline">
+                            <div class="activity-item">
+                                <div class="activity-icon blue">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Booking Confirmed</h4>
+                                    <p>Your booking at Thamel Heights Hostel has been confirmed</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon green">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Review Posted</h4>
+                                    <p>You reviewed Himalayan Retreat with 5 stars</p>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon orange">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Reward Points Earned</h4>
+                                    <p>You earned 250 reward points from your last booking</p>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon purple">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Hostel Added to Favorites</h4>
+                                    <p>You saved Swayambhu Vista Hostel to your favorites</p>
+                                    <span class="activity-time">3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="dashboard-section-content">
+                        <div class="section-header-dash">
+                            <h2>Recommended for You</h2>
+                            <p class="section-subtitle">Based on your preferences and booking history</p>
+                        </div>
+
+                        <div class="recommendations-grid">
+                            <div class="hostel-card-small">
+                                <div class="card-image-small">
+                                    <img src="images/hostels/hostel1.jpeg" alt="Durbar Square Inn">
+                                    <div class="discount-badge">15% OFF</div>
+                                </div>
+                                <div class="card-content-small">
+                                    <h4>Durbar Square Inn</h4>
+                                    <p><i class="fas fa-map-marker-alt"></i> Basantapur</p>
+                                    <div class="rating-price-row">
+                                        <div class="rating-small">
+                                            <i class="fas fa-star"></i> 4.2
+                                        </div>
+                                        <div class="price-small">NPR 500/month</div>
+                                    </div>
+                                    <a href="hostel-detail.html?id=3" class="btn-book-small">Book Now</a>
+                                </div>
+                            </div>
+
+                            <div class="hostel-card-small">
+                                <div class="card-image-small">
+                                    <img src="images/hostels/hostel2.jpeg" alt="Thamel Heights">
+                                    <div class="discount-badge">20% OFF</div>
+                                </div>
+                                <div class="card-content-small">
+                                    <h4>Thamel Heights Hostel</h4>
+                                    <p><i class="fas fa-map-marker-alt"></i> Thamel</p>
+                                    <div class="rating-price-row">
+                                        <div class="rating-small">
+                                            <i class="fas fa-star"></i> 4.8
+                                        </div>
+                                        <div class="price-small">NPR 800/month</div>
+                                    </div>
+                                    <a href="hostel-detail.html?id=1" class="btn-book-small">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span>Basai</span>
+                    </div>
+                    <p>Your trusted hostel management system in Kathmandu, Nepal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="hostels.html">Browse Hostels</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Popular Areas</h3>
+                    <ul>
+                        <li><a href="#">Thamel</a></li>
+                        <li><a href="#">Lazimpat</a></li>
+                        <li><a href="#">Basantapur</a></li>
+                        <li><a href="#">Swayambhu</a></li>
+                        <li><a href="#">Boudha</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Baneshwor, Kathmandu 44600, Nepal</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+977 1-4567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@basai.com.np</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Basai. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

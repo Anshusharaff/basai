@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Reviews - Basai</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/hostels/logo.jpeg" class="image-logo" alt="Basai Logo">
+                    <span>BASAI</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hostels.html">Browse Hostels</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html" class="active">Reviews</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html" class="btn-dashboard">My Dashboard</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Student Reviews</h1>
+            <p>Real experiences from students living in our hostels</p>
+        </div>
+    </section>
+
+    <section class="reviews-stats-section">
+        <div class="container">
+            <div class="stats-overview">
+                <div class="overall-score">
+                    <div class="score-number">4.7</div>
+                    <div class="score-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Based on 2,847 reviews</p>
+                </div>
+
+                <div class="rating-distribution">
+                    <div class="rating-bar-item">
+                        <span class="star-label">5 <i class="fas fa-star"></i></span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="count">2,135</span>
+                    </div>
+                    <div class="rating-bar-item">
+                        <span class="star-label">4 <i class="fas fa-star"></i></span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 18%"></div>
+                        </div>
+                        <span class="count">512</span>
+                    </div>
+                    <div class="rating-bar-item">
+                        <span class="star-label">3 <i class="fas fa-star"></i></span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 5%"></div>
+                        </div>
+                        <span class="count">142</span>
+                    </div>
+                    <div class="rating-bar-item">
+                        <span class="star-label">2 <i class="fas fa-star"></i></span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 1.5%"></div>
+                        </div>
+                        <span class="count">43</span>
+                    </div>
+                    <div class="rating-bar-item">
+                        <span class="star-label">1 <i class="fas fa-star"></i></span>
+                        <div class="bar-container">
+                            <div class="bar-fill" style="width: 0.5%"></div>
+                        </div>
+                        <span class="count">15</span>
+                    </div>
+                </div>
+
+                <div class="category-ratings">
+                    <div class="category-item">
+                        <span class="category-name">Cleanliness</span>
+                        <div class="category-score">4.8</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Staff</span>
+                        <div class="category-score">4.9</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Location</span>
+                        <div class="category-score">4.7</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Value</span>
+                        <div class="category-score">4.6</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-name">Facilities</span>
+                        <div class="category-score">4.5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select class="filter-select">
+                        <option>Most Recent</option>
+                        <option>Highest Rated</option>
+                        <option>Lowest Rated</option>
+                        <option>Most Helpful</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Rating:</label>
+                    <select class="filter-select">
+                        <option>All Ratings</option>
+                        <option>5 Stars</option>
+                        <option>4 Stars</option>
+                        <option>3 Stars</option>
+                        <option>2 Stars</option>
+                        <option>1 Star</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-list-section">
+        <div class="container">
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="images/avatars/avatar1.webp" alt="Sarah Johnson" class="reviewer-avatar">
+                    <div class="reviewer-details">
+                        <h3>Anshu sharaff</h3>
+                        <p class="reviewer-location"><i class="fas fa-map-marker-alt"></i> Janakpur</p>
+                        <p class="review-date">Stayed in December 2025</p>
+                    </div>
+                    <div class="review-rating-large">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="score">5.0</span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h4>Amazing hostel with incredible staff!</h4>
+                    <p>I stayed at Thamel Heights Hostel for a week, and it exceeded all my expectations. The staff was
+                        incredibly friendly and helpful, always going out of their way to assist. The rooms were
+                        spotlessly clean, and the rooftop terrace had amazing views of the mountains. The location is
+                        perfect for exploring Kathmandu - right in the heart of Thamel but quiet enough to sleep well.
+                        Breakfast was delicious with good variety. I met so many wonderful people here. Highly
+                        recommend!</p>
+                    <div class="review-images">
+                        <img src="images/hostels/hostel1.jpeg" alt="Review image">
+                        <img src="images/hostels/hostel3.jpg" alt="Review image">
+                        <img src="images/hostels/hostel4.jpeg" alt="Review image">
+                    </div>
+                    <div class="review-tags">
+                        <!-- <span class="tag">Solo Traveler</span> -->
+                        <span class="tag">Thamel Heights</span>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <button class="btn-helpful">
+                        <i class="far fa-thumbs-up"></i> Helpful (24)
+                    </button>
+                    <button class="btn-reply">
+                        <i class="far fa-comment"></i> Reply
+                    </button>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="images/avatars/avatar1.webp" alt="David Chen" class="reviewer-avatar">
+                    <div class="reviewer-details">
+                        <h3>Shubham shah</h3>
+                        <p class="reviewer-location"><i class="fas fa-map-marker-alt"></i> lumbini</p>
+                        <p class="review-date">Stayed in November 2025</p>
+                    </div>
+                    <div class="review-rating-large">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="score">4.5</span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h4>Great value for digital nomads</h4>
+                    <p>Perfect hostel for remote workers. The WiFi speed was excellent (50+ Mbps), and there are plenty
+                        of power outlets. The common areas are great for working, and they have a quiet zone if you need
+                        to focus. The only minor issue was that the dorms could get a bit noisy at night, but nothing
+                        major. Overall, great value for money and I'd definitely stay again.</p>
+                    <div class="review-tags">
+                        <span class="tag">Digital Nomad</span>
+                        <span class="tag">Himalayan Retreat</span>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <button class="btn-helpful">
+                        <i class="far fa-thumbs-up"></i> Helpful (18)
+                    </button>
+                    <button class="btn-reply">
+                        <i class="far fa-comment"></i> Reply
+                    </button>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="images/avatars/avatar1.webp" alt="Emma Wilson" class="reviewer-avatar">
+                    <div class="reviewer-details">
+                        <h3>Sonali shah </h3>
+                        <p class="reviewer-location"><i class="fas fa-map-marker-alt"></i> Ilam</p>
+                        <p class="review-date">Stayed in October 2025</p>
+                    </div>
+                    <div class="review-rating-large">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="score">5.0</span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h4>Safe and welcoming for female  stay</h4>
+                    <p>As a  female student , I felt very safe here. The female dorm was spacious and clean, with
+                        good security.  The hostel is walkable to my college . The booking process
+                        through Basai was smooth and hassle-free.</p>
+                    <div class="review-tags">
+                        <span class="tag"> girls hostel  </span>
+                        <span class="tag">Durbar Square Inn</span>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <button class="btn-helpful">
+                        <i class="far fa-thumbs-up"></i> Helpful (31)
+                    </button>
+                    <button class="btn-reply">
+                        <i class="far fa-comment"></i> Reply
+                    </button>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="images/avatars/avatar1.webp" alt="Marco Rossi" class="reviewer-avatar">
+                    <div class="reviewer-details">
+                        <h3>Priya karn  </h3>
+                        <p class="reviewer-location"><i class="fas fa-map-marker-alt"></i> birganj</p>
+                        <p class="review-date">Stayed in September 2025</p>
+                    </div>
+                    <div class="review-rating-large">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="score">5.0</span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h4>Best hostel experience in Nepal!</h4>
+                    <p>Absolutely loved my stay! The atmosphere was amazing - perfect mix of social and chill.
+                         The hostel rooftop is the best spot for sunset views . Room was clean and comfortable.
+                         Every after 2,3 day maid come and clean all the stuffs .Thank you Basai for the best hostel!</p>
+                    <div class="review-images">
+                        <img src="images/hostels/hostel1.jpeg" alt="Review image">
+                        <img src="images/hostels/hostel2.jpeg" alt="Review image">
+                    </div>
+                    <div class="review-tags">
+                        <!-- <span class="tag">Couple</span> -->
+                        <span class="tag">Swayambhu Vista hostel</span>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <button class="btn-helpful">
+                        <i class="far fa-thumbs-up"></i> Helpful (27)
+                    </button>
+                    <button class="btn-reply">
+                        <i class="far fa-comment"></i> Reply
+                    </button>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="images/avatars/avatar1.webp" alt="Yuki Tanaka" class="reviewer-avatar">
+                    <div class="reviewer-details">
+                        <h3>kunal verma</h3>
+                        <p class="reviewer-location"><i class="fas fa-map-marker-alt"></i> Jhapa</p>
+                        <p class="review-date">Stayed in August 2025</p>
+                    </div>
+                    <div class="review-rating-large">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="score">4.0</span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h4>Good hostel near Boudhanath</h4>
+                    <p>Nice hostel close to the stupa. The cultural atmosphere is very authentic. Staff was friendly and
+                        rooms were clean. WiFi could be better, and breakfast options were limited. But overall, a good
+                        experience for the price. Good location if you want hostel  in the Tibetan area.</p>
+                    <div class="review-tags">
+                        <!-- <span class="tag">Solo Traveler</span> -->
+                        <span class="tag">Boudha hostel</span>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <button class="btn-helpful">
+                        <i class="far fa-thumbs-up"></i> Helpful (12)
+                    </button>
+                    <button class="btn-reply">
+                        <i class="far fa-comment"></i> Reply
+                    </button>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="images/avatars/avatar1.webp" alt="Lisa Kumar" class="reviewer-avatar">
+                    <div class="reviewer-details">
+                        <h3>Lisa Kumar</h3>
+                        <p class="reviewer-location"><i class="fas fa-map-marker-alt"></i> Hetauda</p>
+                        <p class="review-date">Stayed in July 2025</p>
+                    </div>
+                    <div class="review-rating-large">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="score">4.5</span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <h4>Best girls hostel in Kathmandu</h4>
+                    <p>Staying at Patan Heritage Hostel and loved the traditional Newari architecture.  Close to Patan Durbar
+                        Square, perfect for exploring in free time. The hostel maintains the heritage while providing hygiene and clean surrounding.
+                        Booking through Basai was very convenient.</p>
+                    <div class="review-tags">
+                        <!-- <span class="tag">Group</span> -->
+                        <span class="tag">Patan Heritage hostel</span>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <button class="btn-helpful">
+                        <i class="far fa-thumbs-up"></i> Helpful (19)
+                    </button>
+                    <button class="btn-reply">
+                        <i class="far fa-comment"></i> Reply
+                    </button>
+                </div>
+            </div>
+
+            <div class="load-more-section">
+                <button class="btn-load-more">
+                    Load More Reviews <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="write-review-cta">
+        <div class="container">
+            <div class="cta-box">
+                <i class="fas fa-pen"></i>
+                <h2>Share Your Experience</h2>
+                <p>Have you stayed at one of our hostels? We'd love to hear about your experience!</p>
+                <button class="btn-write-review">Write a Review</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-hotel"></i>
+                        <span>Basai</span>
+                    </div>
+                    <p>Your trusted hostel management system in Kathmandu, Nepal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="hostels.html">Browse Hostels</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Popular Areas</h3>
+                    <ul>
+                        <li><a href="#">Thamel</a></li>
+                        <li><a href="#">Lazimpat</a></li>
+                        <li><a href="#">Basantapur</a></li>
+                        <li><a href="#">Swayambhu</a></li>
+                        <li><a href="#">Boudha</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Baneshwor, Kathmandu 44600, Nepal</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+977 1-4567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@basai.com.np</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Basai. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
