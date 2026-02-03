@@ -1,10 +1,10 @@
-# Basai - Student Accommodation Management System
+# Basaai - Student Accommodation Management System
 
 A comprehensive web platform for students to find and book long-term accommodation near universities and colleges in Kathmandu, Nepal.
 
 ## 📋 Project Overview
 
-Basai is a **presentation-ready** student accommodation website designed specifically for students seeking monthly or yearly room rentals near educational institutions in Kathmandu. Unlike traditional hostel booking platforms focused on short-term stays, Basai caters to students who need stable, long-term housing solutions.
+Basaai is a **presentation-ready** student accommodation website designed specifically for students seeking monthly or yearly room rentals near educational institutions in Kathmandu. Unlike traditional hostel booking platforms focused on short-term stays, Basaai caters to students who need stable, long-term housing solutions.
 
 ### Key Features
 
@@ -17,7 +17,7 @@ Basai is a **presentation-ready** student accommodation website designed specifi
 ## 🗂️ Project Structure
 
 ```
-basai/
+Basaai/
 ├── index.html              # Landing page with search and featured accommodations
 ├── about.html              # Company information, team, mission, and vision
 ├── hostels.html            # Browse page with filters and listings
@@ -72,7 +72,7 @@ basai/
 - Hero section with search functionality
 - Location, move-in date, duration, and room type filters
 - Featured student accommodations (4 properties)
-- Why choose Basai section
+- Why choose Basaai section
 - Student testimonials
 - Call-to-action section
 
@@ -282,14 +282,14 @@ basai/
 1. **Clone or download the project**
    ```bash
    cd /your/desired/directory
-   cp -r /home/shubham/dev/basai .
+   cp -r /home/shubham/dev/Basaai .
    ```
 
 2. **Open in browser**
    - Simply open `index.html` in your web browser
    - Or use a local server (optional):
      ```bash
-     cd basai
+     cd Basaai
      python -m http.server 8000
      # Visit http://localhost:8000
      ```
@@ -384,7 +384,7 @@ This is a presentation/demonstration project created for showcase purposes.
 ## 👥 Contact
 
 For questions about this project:
-- Email: info@basai.com.np
+- Email: info@Basaai.com.np
 - Location: Kathmandu, Nepal
 
 ## 🙏 Acknowledgments
@@ -400,4 +400,4 @@ For questions about this project:
 
 **Version**: 1.0.0  
 **Last Updated**: January 2, 2026  
-**Project**: Basai Student Accommodation Management System
+**Project**: Basaai Student Accommodation Management System
